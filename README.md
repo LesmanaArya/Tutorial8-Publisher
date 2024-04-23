@@ -11,4 +11,9 @@ program, what does it mean? <br/>
 ![RabbitMQ startup screenshot](img/RabbitMQscreesnhot.png)
 
 ## Showing message receiving between Subscriber and Publisher
-![Message sending screesnhot](img/messageReceiving.png)
+![Message sending screenshot](img/messageReceiving.png)
+
+## Sending message repeatedly and frequently
+![Sending message repeatedly screenshot](img/sendingMessageRepeatedly.png)
+
+Spike diatas bisa muncul karena kita mengirim data berkali-kali dengan cepat kepada Subscriber. Setiap kita menjalankan cargo run pada Publisher, ia akan membuat koneksi baru dan mengirim message ke Subscriber. Jika dalam waktu yang singkat kita terus mengirimkan data ke Subscriber, maka akan muncul spike akibat pembuatan koneksi dan pengiriman data yang tinggi ke Subscriber
